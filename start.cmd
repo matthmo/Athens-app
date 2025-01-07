@@ -3,21 +3,21 @@
 echo.
 echo Restoring backend python packages
 echo.
-call python -m pip install -r requirements.txt
-if "%errorlevel%" neq "0" (
-    echo Failed to restore backend python packages
-    exit /B %errorlevel%
-)
+@REM call python -m pip install -r requirements.txt
+@REM if "%errorlevel%" neq "0" (
+@REM     echo Failed to restore backend python packages
+@REM     exit /B %errorlevel%
+@REM )
 
 echo.
 echo Restoring frontend npm packages
 echo.
 cd frontend
-call npm install
-if "%errorlevel%" neq "0" (
-    echo Failed to restore frontend npm packages
-    exit /B %errorlevel%
-)
+@REM call npm install
+@REM if "%errorlevel%" neq "0" (
+@REM     echo Failed to restore frontend npm packages
+@REM     exit /B %errorlevel%
+@REM )
 
 echo.
 echo Building frontend
